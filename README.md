@@ -1,1 +1,2 @@
 # EdmundChiang.github.io
+Hi
