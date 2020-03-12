@@ -225,15 +225,15 @@
 									<div class="fields">
 										<div class="field half">
 											<label for="name">Name</label>
-											<input type="text" name="entry.350505550" id="entry.350505550" 
+											<input type="text" name="entry.350505550" id="entry.350505550" required />
 										</div>
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="email" name="entry.468562531" id="entry.468562531" 
+											<input type="email" name="entry.468562531" id="entry.468562531" required />
 										</div>
 										<div class="field">
 											<label for="message">Message</label>
-											<textarea name="entry.735949463" id="entry.735949463" rows="4" 
+											<textarea name="entry.735949463" id="entry.735949463" rows="4" maxlength="6000" required></textarea>
 										</div>
 									</div>
 									<ul class="actions">
@@ -241,6 +241,7 @@
 										<li><input type="reset" value="Reset" /></li>
 									</ul>
 								</form>
+								<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
 								<ul class="icons">
 									<li><a href="https://www.linkedin.com/in/edmund-chiang-77a663157/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://www.facebook.com/edmund.chiang.9?ref=bookmarks" target="_blank" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -533,7 +534,15 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				  } else {
 					navbar.classList.remove("sticky");
 				  }
-				  }</script>
+					}</script>
+					
+				<script type="text/javascript">
+					$('#gform').on('submit', function(e) {
+						$('#gform *').fadeOut(500, function(){
+							$('#gform').replaceWith("The form has been submitted successfully, I'll get back to you as soon as I can! <br><br><br><br>");
+						});
+					});
+				</script>
 
 	</body>
 </html>
