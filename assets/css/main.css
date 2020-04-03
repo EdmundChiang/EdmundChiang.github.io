@@ -1729,7 +1729,8 @@ input, select, textarea {
 .video-con iframe,
 .video-con object,
 .video-con embed {
-    position: absolute;
+	position: absolute;
+	z-index: -10;
     top: 0;
     left: 0;
     width: 100%;
