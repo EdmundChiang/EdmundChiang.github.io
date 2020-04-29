@@ -1730,7 +1730,7 @@ input, select, textarea {
 .video-con object,
 .video-con embed {
 	position: absolute;
-	z-index: -10;
+	z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
